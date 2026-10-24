@@ -10,3 +10,23 @@ function setMenu(open) {
 toggle.addEventListener('click', () => setMenu(!menu.classList.contains('is-open')));
 menu.querySelectorAll('a').forEach((a) => a.addEventListener('click', () => setMenu(false)));
 document.addEventListener('keydown', (e) => { if (e.key === 'Escape') setMenu(false); });
+
+// ===== Light / Dark mode =====
+const root = document.documentElement;
+const themeBtn = document.getElementById('theme-toggle');
+
+function showTheme(theme) {
+  root.dataset.theme = theme;
+  themeBtn.textContent = theme === 'light' ? 'Dark mode' : 'Light mode';
+}
+function saveTheme(theme) {
+  try { localStorage.setItem('theme', theme); } catch (e) {}
+}
+
+showTheme(root.dataset.theme === 'light' ? 'light' : 'dark');
+
+themeBtn.addEventListener('click', () => {
+  const next = root.dataset.theme === 'light' ? 'dark' : 'light';
+  showTheme(next);
+  saveTheme(next);
+});
