@@ -89,7 +89,27 @@
         <textarea id="experience" name="experience" rows="4" placeholder="Courses, personal projects, competitions, links..."></textarea>
       </div>
     </fieldset>
+    <fieldset class="form__group">
+  <legend>Your links <span class="hint">Optional</span></legend>
 
+  <div class="field" data-field="discord">
+    <label for="discord">Discord username</label>
+    <input id="discord" name="discord" type="text" autocomplete="off" placeholder="username" aria-describedby="discord-error" />
+    <p class="field__error" id="discord-error" role="alert"></p>
+  </div>
+
+  <div class="field" data-field="linkedin">
+    <label for="linkedin">LinkedIn profile</label>
+    <input id="linkedin" name="linkedin" type="text" inputmode="url" autocomplete="off" placeholder="https://www.linkedin.com/in/your-name" aria-describedby="linkedin-error" />
+    <p class="field__error" id="linkedin-error" role="alert"></p>
+  </div>
+
+  <div class="field" data-field="portfolio">
+    <label for="portfolio">Portfolio or GitHub</label>
+    <input id="portfolio" name="portfolio" type="text" inputmode="url" autocomplete="off" placeholder="https://..." aria-describedby="portfolio-error" />
+    <p class="field__error" id="portfolio-error" role="alert"></p>
+  </div>
+</fieldset>
     <button class="btn btn--primary btn--lg" type="submit" id="submit-btn"><span class="spinner" aria-hidden="true"></span><span class="btn__label">Send application</span></button>
     <p class="form__status" id="form-status" role="alert"></p>
   </form>

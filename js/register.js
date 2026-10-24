@@ -13,9 +13,16 @@ function readValues() {
     fullName: s('fullName'), email: s('email'), phone: s('phone'),
     university: s('university'), department: s('department'), level: s('level'),
     interests: d.getAll('interests'), motivation: s('motivation'), experience: s('experience'),
+    discord: s('discord'), linkedin: s('linkedin'), portfolio: s('portfolio'),
   };
 }
 
+function isUrl(v) {
+  try {
+    const u = new URL(v.trim());
+    return u.protocol === 'http:' || u.protocol === 'https:';
+  } catch { return false; }
+}
 function validate(v) {
   const e = {};
   if (v.fullName.trim().length < 3) e.fullName = 'Enter your full name (at least 3 characters).';
@@ -26,6 +33,12 @@ function validate(v) {
   if (!v.level) e.level = 'Choose your study level.';
   if (v.interests.length === 0) e.interests = 'Choose at least one field of interest.';
   if (v.motivation.trim().length < MIN_MOTIVATION) e.motivation = 'Write at least ' + MIN_MOTIVATION + ' characters about why you want to join.';
+  if (v.discord.trim() && !/^@?[a-zA-Z0-9._]{2,32}$/.test(v.discord.trim()))
+  e.discord = 'Enter your Discord username, for example sara_otc.';
+if (v.linkedin.trim() && !(isUrl(v.linkedin) && /linkedin\.com/i.test(v.linkedin)))
+  e.linkedin = 'Enter a LinkedIn link, for example https://www.linkedin.com/in/your-name';
+if (v.portfolio.trim() && !isUrl(v.portfolio))
+  e.portfolio = 'Enter a full link starting with https://';
   return e;
 }
 
