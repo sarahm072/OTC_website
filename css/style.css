@@ -205,3 +205,49 @@ input:focus, select:focus, textarea:focus { outline: none; border-color: var(--c
 .team-card p { font-size: .95rem; }
 .team-card .people { padding-top: 1rem; border-top: 1px solid var(--line); }
 @media (max-width: 600px) { .people--board { grid-template-columns: 1fr; } }
+
+
+/* ========== Light mode ========== */
+:root { color-scheme: dark; }
+
+[data-theme="light"] {
+  color-scheme: light;
+  --bg: #f5f8fc; --surface: #ffffff; --surface-2: #f0f5fb; --line: #d5dfec;
+  --text: #0b1220; --muted: #4a5d7a;
+  --blue: #2563eb; --cyan: #0e7490; --danger: #c9283f;
+}
+[data-theme="light"] body {
+  background-image: radial-gradient(900px 500px at 85% -5%, rgba(37,99,235,.10), transparent 60%),
+                    radial-gradient(700px 400px at -5% 30%, rgba(14,116,144,.07), transparent 60%);
+}
+[data-theme="light"] .navbar { background: rgba(245,248,252,.88); }
+[data-theme="light"] .lead { color: #2b3d5c; }
+[data-theme="light"] .badge { color: #2b3d5c; background: #fff; }
+[data-theme="light"] .hero h1 {
+  background: linear-gradient(180deg, #0b1220 30%, #2563eb);
+  -webkit-background-clip: text; background-clip: text; color: transparent;
+}
+[data-theme="light"] .section--alt { background: linear-gradient(180deg, rgba(255,255,255,.8), rgba(255,255,255,.3)); }
+[data-theme="light"] .tags li { color: #1d4ed8; background: rgba(37,99,235,.1); }
+[data-theme="light"] .btn--primary { color: #fff; box-shadow: 0 6px 20px rgba(14,116,144,.25); }
+[data-theme="light"] .spinner { border-color: rgba(255,255,255,.4); border-top-color: #fff; }
+[data-theme="light"] .avatar,
+[data-theme="light"] .success__check { color: #fff; }
+[data-theme="light"] .cta {
+  border-color: #bcd0ee;
+  background: radial-gradient(600px 240px at 50% 0, rgba(14,116,144,.12), transparent 70%), linear-gradient(135deg, #eaf2ff, #f7fbff);
+}
+[data-theme="light"] .person--lg {
+  border-color: #bcd0ee;
+  background: radial-gradient(400px 160px at 0 0, rgba(14,116,144,.10), transparent 70%), var(--surface);
+}
+[data-theme="light"] .notice { background: rgba(37,99,235,.08); border-color: #bcd0ee; color: #1e3a8a; }
+[data-theme="light"] input:hover,
+[data-theme="light"] select:hover,
+[data-theme="light"] textarea:hover,
+[data-theme="light"] .choice:hover .choice__body { border-color: #9db4d6; }
+[data-theme="light"] .choice input:checked + .choice__body::before {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23ffffff' stroke-width='4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12.5l4.5 4.5L19 7.5'/%3E%3C/svg%3E");
+}
+[data-theme="light"] .benefits__list svg { stroke: var(--cyan); }
+[data-theme="light"] .circuit { filter: drop-shadow(0 0 30px rgba(37,99,235,.2)); }
