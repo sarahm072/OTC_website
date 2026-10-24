@@ -1,6 +1,5 @@
 const API_URL = 'https://script.google.com/macros/s/AKfycbx5c-AKqE-vO6SrsXoW5uV7dOGqy3G9szDZkhTQ4eMRG5WU_lD7Lc45Zj2YFUQ3QDEK/exec';
 
-
 async function submitApplication(data) {
   if (!API_URL) {
     await new Promise((r) => setTimeout(r, 1200));
@@ -8,6 +7,7 @@ async function submitApplication(data) {
   }
   const res = await fetch(API_URL, {
     method: 'POST',
+    // text/plain باش المتصفح ما يدير preflight (Google ما يقبلوش)
     headers: { 'Content-Type': 'text/plain;charset=utf-8' },
     body: JSON.stringify(data),
   });
