@@ -52,6 +52,8 @@ function showErrors(errors) {
   });
 }
 
+
+
 function revalidate() { if (touched) showErrors(validate(readValues())); }
 form.addEventListener('input', revalidate);
 form.addEventListener('change', revalidate);
@@ -114,3 +116,10 @@ document.getElementById('again-btn').addEventListener('click', () => {
   success.hidden = true;
   formView.hidden = false;
 });
+
+const REGISTRATION_OPEN = false;
+
+if (!REGISTRATION_OPEN) {
+  formView.hidden = true;
+  document.getElementById('coming-soon').hidden = false;
+}
