@@ -30,3 +30,12 @@ themeBtn.addEventListener('click', () => {
   showTheme(next);
   saveTheme(next);
 });
+
+// ===== حالة التسجيل في الشارة =====
+const statusBadge = document.getElementById('status-badge');
+if (statusBadge) {
+  statusBadge.classList.toggle('badge--open', REGISTRATION_OPEN);
+  statusBadge.classList.toggle('badge--closed', !REGISTRATION_OPEN);
+  document.getElementById('status-text').textContent =
+    REGISTRATION_OPEN ? 'Recruitment is open' : 'Recruitment is closed';
+}
