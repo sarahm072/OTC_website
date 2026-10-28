@@ -117,7 +117,6 @@ document.getElementById('again-btn').addEventListener('click', () => {
   formView.hidden = false;
 });
 
-const REGISTRATION_OPEN = false;
 
 if (!REGISTRATION_OPEN) {
   formView.hidden = true;
