@@ -56,6 +56,12 @@ ul { list-style: none; margin: 0; padding: 0; }
 
 .badge--outline { background: transparent; border-color: var(--cyan); color: var(--cyan); font-weight: 500; }
 
+/* حالة التسجيل */
+.badge--open { color: #166534; background: #ecfdf3; border-color: #86efac; }
+.badge--open .dot { background: #16a34a; box-shadow: 0 0 8px rgba(22,163,74,.6); }
+
+.badge--closed { color: #991b1b; background: #fef2f2; border-color: #fca5a5; }
+.badge--closed .dot { background: #dc2626; box-shadow: 0 0 8px rgba(220,38,38,.6); }
 
 /* Navbar */
 .navbar { position: sticky; top: 0; z-index: 50; background: rgba(10,15,28,.85); backdrop-filter: blur(12px); border-bottom: 1px solid var(--line); }
