@@ -201,6 +201,12 @@ input:focus, select:focus, textarea:focus { outline: none; border-color: var(--c
 /* روابط السوشيال كنصوص */
 .socials a { width: auto; padding: 0 1rem; min-height: 44px; text-decoration: none; font-size: .95rem; }
 
+/* ---------- Games ---------- */
+.game-thumb { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; border-radius: 10px; border: 1px solid var(--line); margin-bottom: 1rem; background: var(--surface-2); }
+.games-grid .tags { margin-bottom: 1.1rem; }
+@media (min-width: 901px) { .games-grid { grid-template-columns: repeat(2, 1fr); } }
+
+
 /* ---------- Team ---------- */
 .team-title { margin: 2.25rem 0 1rem; font-size: 1.2rem; color: var(--muted); font-weight: 600; }
 .people { display: grid; gap: .9rem; }
