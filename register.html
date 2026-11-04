@@ -1,167 +1,72 @@
 <!doctype html>
 <html lang="en"><head>
 <title>Apply | OTC One Tech Crew</title>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<link rel="icon" href="img/OTC.png" type="image/svg+xml" />
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=Sora:wght@600;700;800&display=swap" rel="stylesheet" />
-<script>try{if(localStorage.getItem('theme')==='light')document.documentElement.dataset.theme='light'}catch(e){}</script>
-<link rel="stylesheet" href="css/style.css" />
+<meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1" /><meta name="theme-color" content="#0b7a99" /><meta property="og:type" content="website" /><meta property="og:title" content="OTC | One Tech Crew" /><meta property="og:description" content="Student club in Algeria for robotics, computer science and technology." /><link rel="icon" href="img/OTC.png" type="image/png" /><link rel="preconnect" href="https://fonts.googleapis.com" /><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin /><link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=Sora:wght@600;700;800&display=swap" rel="stylesheet" /><script>try{var t=localStorage.getItem('theme');if(!t)t=matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';document.documentElement.dataset.theme=t}catch(e){}</script><link rel="stylesheet" href="css/style.css" />
 </head><body>
-<a class="skip-link" href="#main">Skip to content</a>
-<header class="navbar">
-  <div class="container navbar__inner">
-  <a class="logo" href="index.html" aria-label="OTC One Tech Crew, home">
-    <!-- <svg width="34" height="34" viewBox="0 0 34 34" aria-hidden="true">
-      <circle cx="17" cy="17" r="12" fill="none" stroke="#22d3ee" stroke-width="3.5"/>
-      <circle cx="17" cy="17" r="3" fill="#3b82f6"/>
-      <path d="M17 1v4M17 29v4M1 17h4M29 17h4" stroke="#3b82f6" stroke-width="2.5" stroke-linecap="round"/>
-    </svg> -->
-    <img src="img/OTC.png" alt="">
-    <span>OTC<small>One Tech Crew</small></span></a>
-<button class="navbar__toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Open menu"><span></span><span></span><span></span></button>
-<nav id="nav-menu" class="navbar__menu" aria-label="Main">
-  <ul>
-<li><a href="index.html#about">About</a></li>
-<li><a href="index.html#fields">Fields</a></li>
-<li><a href="index.html#benefits">Benefits</a></li>
-<li><a href="index.html#games">Games</a></li>
-<li><a href="index.html#team">Team</a></li>
-</ul>
-<a class="btn btn--primary btn--sm" href="register.html">Join the crew</a>
-<button class="btn btn--ghost btn--sm" id="theme-toggle" type="button">Light mode</button></nav></div></header>
-<main id="main" class="page-register">
-<div class="container container--narrow">
+<a class="skip" href="#main">Skip to content</a>
+<div id="site-header"></div>
+<main id="main" class="page"><div class="wrap narrow">
 
-<!-- ====== الفورم ====== -->
-<section class="success card" id="coming-soon" aria-labelledby="soon-title" hidden>
-  <div class="success__check" aria-hidden="true">
-    <svg viewBox="0 0 24 24" width="40" height="40" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
-  </div>
-  <h1 id="soon-title">Applications open soon</h1>
-  <p class="lead">We are not accepting applications yet. Follow our social media pages to be the first to know when recruitment opens.</p>
-  <div class="hero__actions">
-    <a class="btn btn--primary" href="index.html">Back to home</a>
-    <a class="btn btn--ghost" href="https://www.instagram.com/one_tech_crew/" target="_blank" rel="noopener noreferrer">Follow us on Instagram</a>
-  </div>
+<section class="card done" id="soon" aria-labelledby="soon-t" hidden>
+  <div class="check" aria-hidden="true"><svg viewBox="0 0 24 24" width="40" height="40" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div>
+  <h1 id="soon-t" style="font-size:clamp(2rem,5vw,2.8rem)">Applications open soon</h1>
+  <p class="lead">We are not accepting applications yet. Follow our pages to be the first to know when recruitment opens.</p>
+  <div class="actions"><a class="btn btn--p" href="index.html">Back to home</a><a class="btn btn--g" href="https://www.instagram.com/one_tech_crew/" target="_blank" rel="noopener noreferrer">Follow us on Instagram</a></div>
 </section>
-  
-<div id="form-view">
-  <a class="back-link" href="index.html">Back to home</a>
-  <h1 class="page-title">Apply to join OTC</h1>
+
+<div id="form-view" hidden>
+  <a class="back" href="index.html">Back to home</a>
+  <h1 style="font-size:clamp(2rem,5vw,2.8rem)">Apply to join OTC</h1>
   <p class="lead">Tell us about yourself. Every field is required unless it says "Optional".</p>
-
-  <form id="apply-form" class="form card" novalidate>
-    <fieldset class="form__group"><legend>About you</legend>
-      <div class="field" data-field="fullName"><label for="fullName">Full name</label><input id="fullName" name="fullName" type="text" autocomplete="name" placeholder="" aria-describedby="fullName-error" required /><p class="field__error" id="fullName-error" role="alert"></p></div>
-      <div class="form__row">
-        <div class="field" data-field="email"><label for="email">Email</label><input id="email" name="email" type="email" autocomplete="email" placeholder="name@example.com" aria-describedby="email-error" required /><p class="field__error" id="email-error" role="alert"></p></div>
-        <div class="field" data-field="phone"><label for="phone">Phone number</label><input id="phone" name="phone" type="tel" autocomplete="tel" placeholder="(+213)---------" aria-describedby="phone-error" required /><p class="field__error" id="phone-error" role="alert"></p></div>
-      </div>
+  <form id="form" class="form card" novalidate>
+    <p class="notice" id="demo" hidden><strong>Demo mode.</strong> This form is not connected to a server. Nothing you enter is saved or sent.</p>
+    <fieldset><legend>About you</legend>
+      <div class="field" data-f="fullName"><label for="fullName">Full name</label><input id="fullName" name="fullName" type="text" autocomplete="name" placeholder="" aria-describedby="fullName-e" required /><p class="ferr" id="fullName-e" role="alert"></p></div>
+      <div class="row"><div class="field" data-f="email"><label for="email">Email</label><input id="email" name="email" type="email" autocomplete="email" placeholder="name@example.com" aria-describedby="email-e" required /><p class="ferr" id="email-e" role="alert"></p></div><div class="field" data-f="phone"><label for="phone">Phone number</label><input id="phone" name="phone" type="tel" autocomplete="tel" placeholder="0550 12 34 56" aria-describedby="phone-e" required /><p class="ferr" id="phone-e" role="alert"></p></div></div>
     </fieldset>
-
-    <fieldset class="form__group"><legend>Your studies</legend>
-      <div class="form__row">
-        <div class="field" data-field="university"><label for="university">University</label><input id="university" name="university" type="text" autocomplete="organization" placeholder="" aria-describedby="university-error" required /><p class="field__error" id="university-error" role="alert"></p></div>
-        <div class="field" data-field="department"><label for="department">Department</label><input id="department" name="department" type="text" autocomplete="off" placeholder="" aria-describedby="department-error" required /><p class="field__error" id="department-error" role="alert"></p></div>
-      </div>
-      <div class="field" data-field="level">
-        <label for="level">Study level</label>
-        <select id="level" name="level" aria-describedby="level-error" required>
-          <option value="">Choose your level</option>
-          <option>Licence 1</option><option>Licence 2</option><option>Licence 3</option>
-          <option>Master 1</option><option>Master 2</option><option>Engineering cycle</option>
-          <option>Doctorate</option><option>Other</option>
-        </select>
-        <p class="field__error" id="level-error" role="alert"></p>
-      </div>
+    <fieldset><legend>Your studies</legend>
+      <div class="row"><div class="field" data-f="university"><label for="university">University</label><input id="university" name="university" type="text" autocomplete="organization" placeholder="" aria-describedby="university-e" required /><p class="ferr" id="university-e" role="alert"></p></div><div class="field" data-f="department"><label for="department">Department</label><input id="department" name="department" type="text" autocomplete="off" placeholder="" aria-describedby="department-e" required /><p class="ferr" id="department-e" role="alert"></p></div></div>
+      <div class="field" data-f="level"><label for="level">Study level</label>
+        <select id="level" name="level" aria-describedby="level-e" required><option value="">Choose your level</option><option>Licence 1</option><option>Licence 2</option><option>Licence 3</option><option>Master 1</option><option>Master 2</option><option>Engineering cycle</option><option>Doctorate</option><option>Other</option></select>
+        <p class="ferr" id="level-e" role="alert"></p></div>
     </fieldset>
-
-    <fieldset class="form__group" data-field="interests" aria-describedby="interests-error">
-      <legend>Fields of interest <span class="hint">Choose at least one</span></legend>
-      <div class="choice-grid">
-<label class="choice"><input type="checkbox" name="interests" value="robotics" /><span class="choice__body"><strong>Robotics</strong><small>Arduino, sensors, motors</small></span></label>
-<label class="choice"><input type="checkbox" name="interests" value="cs" /><span class="choice__body"><strong>Computer science</strong><small>Algorithms, web, AI</small></span></label>
-<label class="choice"><input type="checkbox" name="interests" value="embedded" /><span class="choice__body"><strong>Embedded systems</strong><small>Microcontrollers, IoT</small></span></label>
-<label class="choice"><input type="checkbox" name="interests" value="design" /><span class="choice__body"><strong>3D and design</strong><small>CAD, printing, UI</small></span></label>
-<label class="choice"><input type="checkbox" name="interests" value="events" /><span class="choice__body"><strong>Events and media</strong><small>Workshops, content</small></span></label>
-<label class="choice"><input type="checkbox" name="interests" value="other" /><span class="choice__body"><strong>Other</strong><small>Tell us in your motivation</small></span></label>
-      </div>
-      <p class="field__error" id="interests-error" role="alert"></p>
+    <fieldset data-f="interests" aria-describedby="interests-e"><legend>Fields of interest <span class="hint">Choose at least one</span></legend>
+      <div class="choices">
+<label class="choice"><input type="checkbox" name="interests" value="robotics" /><span class="cbody"><strong>Robotics</strong><small>Arduino, sensors, motors</small></span></label>
+<label class="choice"><input type="checkbox" name="interests" value="cs" /><span class="cbody"><strong>Computer science</strong><small>Algorithms, web, AI</small></span></label>
+<label class="choice"><input type="checkbox" name="interests" value="embedded" /><span class="cbody"><strong>Embedded systems</strong><small>Microcontrollers, IoT</small></span></label>
+<label class="choice"><input type="checkbox" name="interests" value="design" /><span class="cbody"><strong>3D and design</strong><small>CAD, printing, UI</small></span></label>
+<label class="choice"><input type="checkbox" name="interests" value="events" /><span class="cbody"><strong>Events and media</strong><small>Workshops, content</small></span></label>
+<label class="choice"><input type="checkbox" name="interests" value="other" /><span class="cbody"><strong>Other</strong><small>Tell us in your motivation</small></span></label>
+      </div><p class="ferr" id="interests-e" role="alert"></p>
     </fieldset>
-
-    <fieldset class="form__group"><legend>Tell us more</legend>
-      <div class="field" data-field="motivation">
-        <label for="motivation">Why do you want to join OTC?</label>
-        <textarea id="motivation" name="motivation" rows="5" aria-describedby="motivation-count motivation-error" required></textarea>
-        <p class="hint" id="motivation-count">0 / 40 characters minimum</p>
-        <p class="field__error" id="motivation-error" role="alert"></p>
-      </div>
-      <div class="field">
-        <label for="experience">Previous experience or projects <span class="hint">Optional</span></label>
-        <textarea id="experience" name="experience" rows="4" placeholder="Courses, personal projects, competitions, links..."></textarea>
-      </div>
+    <fieldset><legend>Tell us more</legend>
+      <div class="field" data-f="motivation"><label for="motivation">Why do you want to join OTC?</label>
+        <textarea id="motivation" name="motivation" rows="5" aria-describedby="count motivation-e" required></textarea>
+        <p class="hint" id="count">0 / 40 characters minimum</p><p class="ferr" id="motivation-e" role="alert"></p></div>
+      <div class="field"><label for="experience">Previous experience or projects <span class="hint">Optional</span></label>
+        <textarea id="experience" name="experience" rows="4" placeholder="Courses, personal projects, competitions, links..."></textarea></div>
     </fieldset>
-    <fieldset class="form__group">
-  <legend>Your links <span class="hint">Optional</span></legend>
-
-  <div class="field" data-field="discord">
-    <label for="discord">Discord username</label>
-    <input id="discord" name="discord" type="text" autocomplete="off" placeholder="username" aria-describedby="discord-error" />
-    <p class="field__error" id="discord-error" role="alert"></p>
-  </div>
-
-  <div class="field" data-field="linkedin">
-    <label for="linkedin">LinkedIn profile</label>
-    <input id="linkedin" name="linkedin" type="text" inputmode="url" autocomplete="off" placeholder="https://www.linkedin.com/in/your-name" aria-describedby="linkedin-error" />
-    <p class="field__error" id="linkedin-error" role="alert"></p>
-  </div>
-
-  <div class="field" data-field="portfolio">
-    <label for="portfolio">Portfolio or GitHub</label>
-    <input id="portfolio" name="portfolio" type="text" inputmode="url" autocomplete="off" placeholder="https://..." aria-describedby="portfolio-error" />
-    <p class="field__error" id="portfolio-error" role="alert"></p>
-  </div>
-</fieldset>
-    <button class="btn btn--primary btn--lg" type="submit" id="submit-btn"><span class="spinner" aria-hidden="true"></span><span class="btn__label">Send application</span></button>
-    <p class="form__status" id="form-status" role="alert"></p>
+    <fieldset><legend>Your links <span class="hint">Optional</span></legend>
+      <div class="field" data-f="discord"><label for="discord">Discord username</label><input id="discord" name="discord" type="text" autocomplete="off" placeholder="username" aria-describedby="discord-e"  /><p class="ferr" id="discord-e" role="alert"></p></div>
+      <div class="field" data-f="linkedin"><label for="linkedin">LinkedIn profile</label><input id="linkedin" name="linkedin" type="text" autocomplete="off" placeholder="https://www.linkedin.com/in/your-name" aria-describedby="linkedin-e" inputmode="url" /><p class="ferr" id="linkedin-e" role="alert"></p></div>
+      <div class="field" data-f="portfolio"><label for="portfolio">Portfolio or GitHub</label><input id="portfolio" name="portfolio" type="text" autocomplete="off" placeholder="https://..." aria-describedby="portfolio-e" inputmode="url" /><p class="ferr" id="portfolio-e" role="alert"></p></div>
+    </fieldset>
+    <div class="hp" aria-hidden="true"><label>Company<input type="text" name="company" tabindex="-1" autocomplete="off" /></label></div>
+    <button class="btn btn--p btn--l" type="submit" id="send"><span class="spin" aria-hidden="true"></span><span id="send-t">Send application</span></button>
+    <p class="status" id="status" role="alert"></p>
   </form>
 </div>
 
-<!-- ====== صفحة النجاح (مخبية حتى يتصيفط الفورم) ====== -->
-<section class="success card" id="success" tabindex="-1" aria-labelledby="success-title" hidden>
-  <div class="success__check" aria-hidden="true"><svg viewBox="0 0 24 24" width="40" height="40" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></div>
-  <h1 id="success-title">Demo complete</h1>
-  <p class="lead" id="success-text"></p>
-  <dl class="summary">
-    <div><dt>Email</dt><dd id="s-email"></dd></div>
-    <div><dt>Studies</dt><dd id="s-studies"></dd></div>
-    <div><dt>Interests</dt><dd id="s-interests"></dd></div>
-  </dl>
-  <div class="hero__actions">
-    <a class="btn btn--primary" href="index.html">Back to home</a>
-    <button class="btn btn--ghost" type="button" id="again-btn">Fill the form again</button>
-  </div>
+<section class="card done" id="done" tabindex="-1" aria-labelledby="done-t" hidden>
+  <div class="check" aria-hidden="true"><svg viewBox="0 0 24 24" width="40" height="40" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></div>
+  <h1 id="done-t" style="font-size:clamp(2rem,5vw,2.8rem)">Application received</h1>
+  <p class="lead" id="done-text"></p>
+  <dl class="summary"><div><dt>Email</dt><dd id="s-email"></dd></div><div><dt>Studies</dt><dd id="s-studies"></dd></div><div><dt>Interests</dt><dd id="s-int"></dd></div></dl>
+  <div class="actions"><a class="btn btn--p" href="index.html">Back to home</a><button class="btn btn--g" type="button" id="again">Fill the form again</button></div>
 </section>
 
-</div>
-</main>
-<footer class="footer"><div class="container footer__inner">
-  <div><a class="logo" href="index.html" aria-label="OTC One Tech Crew, home">
-    <img src="img/OTC.png" alt="OTC One Tech Crew logo">
-    <span>OTC<small>One Tech Crew</small></span></a><p class="footer__tag">Build. Innovate. Create.</p></div>
-<ul class="socials" aria-label="Social media">
-<li><a href="https://web.facebook.com/onetechcrew/?_rdc=1&_rdr#">Facebook</a></li>
-<li><a href="https://www.instagram.com/one_tech_crew/">Instagram</a></li>
-<li><a href="https://www.linkedin.com/in/one-tech-crew-41b414417?utm_source=share_via&utm_content=profile&utm_medium=member_android">LinkedIn</a></li>
-<!-- <li><a href="#">GitHub</a></li> -->
-</ul>
-</div>
-<p class="container footer__copy">&copy; 2026 One Tech Crew. All rights reserved.</p></footer>
-  <script src="js/config.js"></script>
-<script src="js/main.js"></script>
-<script src="js/api.js"></script>
-<script src="js/register.js"></script>
+</div></main>
+<div id="site-footer"></div>
+<script src="js/config.js"></script><script src="js/data.js"></script><script src="js/main.js"></script><script src="js/api.js"></script><script src="js/register.js"></script>
 </body></html>
