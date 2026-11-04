@@ -11,7 +11,7 @@ const TEAMS = [
     ['Mouaid Yahiaoui', 'Leader', 'img/mouiad.png', 'https://www.linkedin.com/in/mouaid-yahiaoui-a2bb2b284/'],
     ['Sarra Meraouche', 'Co-leader', '', 'https://dz.linkedin.com/in/sarra-meraouche-b16bb22a9']]],
   ['SM', "Social media, content and the club's online image.", [
-    ['Malak Achouri Yassmine', 'Leader', 'img/malak.png', 'https://www.linkedin.com/in/malak-yassamine-38a725319'],
+    ['Malak Yassamine Aouaichra', 'Leader', 'img/malak.png', 'https://www.linkedin.com/in/malak-yassamine-38a725319'],
     ['Amina Lebbal', 'Co-leader', '', 'https://www.linkedin.com/in/amina-lebbal']]],
   ['HR', 'Members, onboarding and team spirit.', [
     ['Khadidja Grabsi', 'Leader', 'img/khadija.png', 'https://www.linkedin.com/in/grabsi-khadidja-3859263a0']]],
