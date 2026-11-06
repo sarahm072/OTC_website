@@ -16,7 +16,7 @@ document.getElementById('site-footer').innerHTML = `<footer class="foot"><div cl
 <li><a class="pill" href="https://www.instagram.com/one_tech_crew/" target="_blank" rel="noopener noreferrer">Instagram</a></li>
 <li><a class="pill" href="https://www.facebook.com/onetechcrew/" target="_blank" rel="noopener noreferrer">Facebook</a></li>
 
-<li><a class="pill" href="https://www.tiktok.com/@USERNAME" target="_blank" rel="noopener noreferrer">TikTok</a></li>
+<li><a class="pill" href="https://www.tiktok.com/@onetechcrew?_r=1&_t=ZS-9BBd0BbH2LE" target="_blank" rel="noopener noreferrer">TikTok</a></li>
 <!-- <li><a class="pill" href="https://github.com/USERNAME" target="_blank" rel="noopener noreferrer">GitHub</a></li> 
 <li><a class="pill" href="mailto:contact@example.com">contact@example.com</a></li> -->
 
