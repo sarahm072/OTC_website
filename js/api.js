@@ -1,5 +1,5 @@
 
-const API_URL = 'https://script.google.com/macros/s/AKfycbwvxC5qzpj5-ynwTYcNjW1cqthjapDYJMU8B4EY-AknqTSLxOWttd-ZTMQleEYxSA/exec';
+const API_URL = 'https://script.google.com/macros/s/AKfycbyRROo9ypJpwnFmzkoAOo7K40eye3tVoPemLeaUmKKtsIDiJPPi7aHFTazzAch-krWM/exec';
 
 async function submitApplication(data) {
   if (!API_URL) {
