@@ -1,0 +1,14 @@
+/* أسئلة الفورم الجديدة (أضيفي ملف الـ CSS هذا) */
+.sub{border:0;margin:0;padding:0;display:grid;gap:.6rem;min-width:0}.sub>legend{font:600 1rem var(--body);margin:0 0 .4rem;padding:0}
+.choice input:disabled+.cbody{opacity:.45;cursor:not-allowed}
+.days{display:flex;flex-wrap:wrap;gap:.6rem}
+.dayc{position:relative}.dayc input{position:absolute;opacity:0;inset:0;width:100%;height:100%;margin:0;cursor:pointer}
+.dayc span{display:inline-block;padding:.55rem 1.1rem;border:1.5px solid var(--line-2);border-radius:99px;font-weight:600;background:var(--card);transition:background .2s,border-color .2s}
+.dayc input:checked+span{background:var(--btn);border-color:var(--btn);color:var(--btn-ink)}
+.dayc input:focus-visible+span{outline:3px solid var(--link);outline-offset:2px}
+.consent{display:grid;gap:.9rem}
+.consent label{display:flex;gap:.7rem;align-items:flex-start;font-weight:500;cursor:pointer}
+.consent input{flex:none;width:20px;height:20px;margin-top:.2rem;accent-color:var(--brand-d)}
+/* فواصل بين أقسام الفورم */
+.form>fieldset+fieldset{border-top:1px solid var(--line);padding-top:1.75rem}
+.roles{display:grid;gap:1.25rem}
