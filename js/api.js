@@ -1,4 +1,5 @@
-const API_URL = 'https://script.google.com/macros/s/AKfycbwmfqHXvkkVtSxLAE8SuHiioNpWCHlf6om1CafJ6nAxe1R89tPRmLUejpIfBxNGjoGK/exec';
+
+const API_URL = 'https://script.google.com/macros/s/AKfycbzLIVzBt5JgawISeBTR7PcsBt6cxZ_7m77J_P2q1hTjIT-5RGh-vpNeDBl7_N0_Fw/exec';
 
 async function submitApplication(data) {
   if (!API_URL) {
@@ -7,8 +8,7 @@ async function submitApplication(data) {
   }
   const res = await fetch(API_URL, {
     method: 'POST',
-    // text/plain باش المتصفح ما يدير preflight (Google ما يقبلوش)
-    headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+    headers: { 'Content-Type': 'text/plain;charset=utf-8' }, // text/plain باش Google يقبل بلا preflight
     body: JSON.stringify(data),
   });
   const result = await res.json();
