@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en"><head>
 <title>Apply | OTC One Tech Crew</title>
-<meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1" /><meta name="theme-color" content="#0b7a99" /><meta property="og:type" content="website" /><meta property="og:title" content="OTC | One Tech Crew" /><meta property="og:description" content="Student club in Algeria for robotics, computer science and technology." /><link rel="icon" href="img/OTC.png" type="image/png" /><link rel="preconnect" href="https://fonts.googleapis.com" /><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin /><link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=Sora:wght@600;700;800&display=swap" rel="stylesheet" /><script>try{var t=localStorage.getItem('theme');if(!t)t=matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';document.documentElement.dataset.theme=t}catch(e){}</script><link rel="stylesheet" href="css/style.css" />
+<meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1" /><meta name="theme-color" content="#0b7a99" /><meta property="og:type" content="website" /><meta property="og:title" content="OTC | One Tech Crew" /><meta property="og:description" content="Student club in Algeria for robotics, computer science and technology." /><link rel="icon" href="img/OTC.png" type="image/png" /><link rel="preconnect" href="https://fonts.googleapis.com" /><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin /><link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=Sora:wght@600;700;800&display=swap" rel="stylesheet" /><script>try{var t=localStorage.getItem('theme');if(!t)t=matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';document.documentElement.dataset.theme=t}catch(e){}</script><link rel="stylesheet" href="css/style.css" /><link rel="stylesheet" href="css/form.css" />
 </head><body>
 <a class="skip" href="#main">Skip to content</a>
 <div id="site-header"></div>
@@ -19,39 +19,49 @@
   <h1 style="font-size:clamp(2rem,5vw,2.8rem)">Apply to join OTC</h1>
   <p class="lead">Tell us about yourself. Every field is required unless it says "Optional".</p>
   <form id="form" class="form card" novalidate>
-    <p class="notice" id="demo" hidden><strong>Demo mode.</strong> This form is not connected to a server. Nothing you enter is saved or sent.</p>
+    <!-- <p class="notice" id="demo" hidden><strong>Demo mode.</strong> This form is not connected to a server. Nothing you enter is saved or sent.</p> -->
+
     <fieldset><legend>About you</legend>
-      <div class="field" data-f="fullName"><label for="fullName">Full name</label><input id="fullName" name="fullName" type="text" autocomplete="name" placeholder="" aria-describedby="fullName-e" required /><p class="ferr" id="fullName-e" role="alert"></p></div>
+      <div class="row"><div class="field" data-f="fullName"><label for="fullName">Full name</label><input id="fullName" name="fullName" type="text" autocomplete="name" placeholder="" aria-describedby="fullName-e" required /><p class="ferr" id="fullName-e" role="alert"></p></div><div class="field" data-f="birth"><label for="birth">Date of birth</label><input id="birth" name="birth" type="date" autocomplete="bday" placeholder="" aria-describedby="birth-e" required /><p class="ferr" id="birth-e" role="alert"></p></div></div>
       <div class="row"><div class="field" data-f="email"><label for="email">Email</label><input id="email" name="email" type="email" autocomplete="email" placeholder="name@example.com" aria-describedby="email-e" required /><p class="ferr" id="email-e" role="alert"></p></div><div class="field" data-f="phone"><label for="phone">Phone number</label><input id="phone" name="phone" type="tel" autocomplete="tel" placeholder="0550 12 34 56" aria-describedby="phone-e" required /><p class="ferr" id="phone-e" role="alert"></p></div></div>
     </fieldset>
+
     <fieldset><legend>Your studies</legend>
       <div class="row"><div class="field" data-f="university"><label for="university">University</label><input id="university" name="university" type="text" autocomplete="organization" placeholder="" aria-describedby="university-e" required /><p class="ferr" id="university-e" role="alert"></p></div><div class="field" data-f="department"><label for="department">Department</label><input id="department" name="department" type="text" autocomplete="off" placeholder="" aria-describedby="department-e" required /><p class="ferr" id="department-e" role="alert"></p></div></div>
-      <div class="field" data-f="level"><label for="level">Study level</label>
-        <select id="level" name="level" aria-describedby="level-e" required><option value="">Choose your level</option><option>Licence 1</option><option>Licence 2</option><option>Licence 3</option><option>Master 1</option><option>Master 2</option><option>Engineering cycle</option><option>Doctorate</option><option>Other</option></select>
-        <p class="ferr" id="level-e" role="alert"></p></div>
+      <div class="row"><div class="field" data-f="specialty"><label for="specialty">Specialty</label><input id="specialty" name="specialty" type="text" autocomplete="off" placeholder="" aria-describedby="specialty-e" required /><p class="ferr" id="specialty-e" role="alert"></p></div><div class="field" data-f="level"><label for="level">Study level</label><select id="level" name="level" aria-describedby="level-e" required><option value="">Choose your level</option><option>Licence 1</option><option>Licence 2</option><option>Licence 3</option><option>Master 1</option><option>Master 2</option><option>Engineering cycle</option><option>Doctorate</option><option>Other</option></select><p class="ferr" id="level-e" role="alert"></p></div></div>
+      <div class="field" data-f="studentId"><label for="studentId">Student ID (matricule)</label><input id="studentId" name="studentId" type="text" autocomplete="off" placeholder="" aria-describedby="studentId-e" required /><p class="ferr" id="studentId-e" role="alert"></p></div>
     </fieldset>
-    <fieldset data-f="interests" aria-describedby="interests-e"><legend>Fields of interest <span class="hint">Choose at least one</span></legend>
-      <div class="choices">
-<label class="choice"><input type="checkbox" name="interests" value="robotics" /><span class="cbody"><strong>Robotics</strong><small>Arduino, sensors, motors</small></span></label>
-<label class="choice"><input type="checkbox" name="interests" value="cs" /><span class="cbody"><strong>Computer science</strong><small>Algorithms, web, AI</small></span></label>
-<label class="choice"><input type="checkbox" name="interests" value="embedded" /><span class="cbody"><strong>Embedded systems</strong><small>Microcontrollers, IoT</small></span></label>
-<label class="choice"><input type="checkbox" name="interests" value="design" /><span class="cbody"><strong>3D and design</strong><small>CAD, printing, UI</small></span></label>
-<label class="choice"><input type="checkbox" name="interests" value="events" /><span class="cbody"><strong>Events and media</strong><small>Workshops, content</small></span></label>
-<label class="choice"><input type="checkbox" name="interests" value="other" /><span class="cbody"><strong>Other</strong><small>Tell us in your motivation</small></span></label>
-      </div><p class="ferr" id="interests-e" role="alert"></p>
+
+    <fieldset><legend>Your team</legend>
+      <fieldset class="sub" data-f="interests" aria-describedby="interests-e">
+        <legend>Fields of interest <span class="hint" id="dept-count">Choose 1 to 3 departments (0 of 3 chosen)</span></legend>
+        <div class="choices" id="dept-cards"></div><p class="ferr" id="interests-e" role="alert"></p>
+      </fieldset>
+      <div class="roles" id="roles"></div>
+      <div class="field" data-f="secondChoice" id="second-wrap" hidden><label for="secondChoice">Your second choice <span class="hint">Optional</span></label><select id="secondChoice" name="secondChoice"><option value="">No second choice</option></select></div>
+      <div class="field" data-f="currentLevel"><label for="currentLevel">Your current level</label><select id="currentLevel" name="currentLevel" aria-describedby="currentLevel-e" required><option value="">Choose your level</option><option>Beginner</option><option>Intermediate</option><option>Advanced</option></select><p class="ferr" id="currentLevel-e" role="alert"></p></div>
+      <div class="field" data-f="skills"><label for="skills">Skills and tools you already know <span class="hint">Optional</span></label><input id="skills" name="skills" type="text" autocomplete="off" placeholder="Python, Arduino, Canva, public speaking..." aria-describedby="skills-e" /><p class="ferr" id="skills-e" role="alert"></p></div>
     </fieldset>
+
+    <fieldset><legend>Your time</legend>
+      <fieldset class="sub" data-f="days" aria-describedby="days-e"><legend>Days you are usually free <span class="hint">Choose at least one</span></legend><div class="days"><label class="dayc"><input type="checkbox" name="days" value="Saturday" /><span>Saturday</span></label><label class="dayc"><input type="checkbox" name="days" value="Sunday" /><span>Sunday</span></label><label class="dayc"><input type="checkbox" name="days" value="Monday" /><span>Monday</span></label><label class="dayc"><input type="checkbox" name="days" value="Tuesday" /><span>Tuesday</span></label><label class="dayc"><input type="checkbox" name="days" value="Wednesday" /><span>Wednesday</span></label><label class="dayc"><input type="checkbox" name="days" value="Thursday" /><span>Thursday</span></label><label class="dayc"><input type="checkbox" name="days" value="Friday" /><span>Friday</span></label></div><p class="ferr" id="days-e" role="alert"></p></fieldset>
+      <div class="row"><div class="field" data-f="hours"><label for="hours">Hours you can give each week</label><select id="hours" name="hours" aria-describedby="hours-e" required><option value="">Choose hours</option><option>1 to 2 hours</option><option>3 to 5 hours</option><option>6 to 10 hours</option><option>More than 10 hours</option></select><p class="ferr" id="hours-e" role="alert"></p></div><div class="field" data-f="laptop"><label for="laptop">Do you have a laptop for workshops?</label><select id="laptop" name="laptop" aria-describedby="laptop-e" required><option value="">Choose an answer</option><option>Yes</option><option>No</option><option>Not yet, but I can get one</option></select><p class="ferr" id="laptop-e" role="alert"></p></div></div>
+      <div class="field" data-f="heard"><label for="heard">How did you hear about OTC?</label><select id="heard" name="heard" aria-describedby="heard-e" required><option value="">Choose an answer</option><option>Instagram</option><option>Facebook</option><option>A friend or club member</option><option>University event</option><option>Other</option></select><p class="ferr" id="heard-e" role="alert"></p></div>
+    </fieldset>
+
     <fieldset><legend>Tell us more</legend>
-      <div class="field" data-f="motivation"><label for="motivation">Why do you want to join OTC?</label>
-        <textarea id="motivation" name="motivation" rows="5" aria-describedby="count motivation-e" required></textarea>
-        <p class="hint" id="count">0 / 40 characters minimum</p><p class="ferr" id="motivation-e" role="alert"></p></div>
-      <div class="field"><label for="experience">Previous experience or projects <span class="hint">Optional</span></label>
-        <textarea id="experience" name="experience" rows="4" placeholder="Courses, personal projects, competitions, links..."></textarea></div>
+      <div class="field" data-f="motivation"><label for="motivation">Why do you want to join OTC?</label><textarea id="motivation" name="motivation" rows="5" placeholder="" aria-describedby="count motivation-e" required></textarea><p class="hint" id="count">0 / 40 characters minimum</p><p class="ferr" id="motivation-e" role="alert"></p></div>
+      <div class="field" data-f="goals"><label for="goals">What do you hope to learn or build this year?</label><textarea id="goals" name="goals" rows="5" placeholder="" aria-describedby="goals-e" required></textarea><p class="ferr" id="goals-e" role="alert"></p></div>
+      <div class="field" data-f="experience"><label for="experience">Previous clubs, projects or competitions <span class="hint">Optional</span></label><textarea id="experience" name="experience" rows="4" placeholder="Clubs, courses, personal projects, links..." aria-describedby="experience-e"></textarea><p class="ferr" id="experience-e" role="alert"></p></div>
+      <div class="row"><div class="field" data-f="discord"><label for="discord">Discord username</label><input id="discord" name="discord" type="text" autocomplete="off" placeholder="username" aria-describedby="discord-e" required /><p class="ferr" id="discord-e" role="alert"></p></div><div class="field" data-f="linkedin"><label for="linkedin">LinkedIn profile <span class="hint">Optional</span></label><input id="linkedin" name="linkedin" type="text" autocomplete="off" placeholder="https://www.linkedin.com/in/your-name" aria-describedby="linkedin-e" inputmode="url" /><p class="ferr" id="linkedin-e" role="alert"></p></div></div>
+      <div class="field" data-f="portfolio"><label for="portfolio">Portfolio or GitHub <span class="hint">Optional</span></label><input id="portfolio" name="portfolio" type="text" autocomplete="off" placeholder="https://..." aria-describedby="portfolio-e" inputmode="url" /><p class="ferr" id="portfolio-e" role="alert"></p></div>
+      <div class="consent">
+        <div data-f="consentRules"><label><input type="checkbox" name="consentRules" aria-describedby="consentRules-e" /><span>I will follow the club rules and take part in my team's activities.</span></label><p class="ferr" id="consentRules-e" role="alert"></p></div>
+        <div data-f="consentData"><label><input type="checkbox" name="consentData" aria-describedby="consentData-e" /><span>OTC may store my answers to process my registration and contact me.</span></label><p class="ferr" id="consentData-e" role="alert"></p></div>
+        <div data-f="consentMedia"><label><input type="checkbox" name="consentMedia" aria-describedby="consentMedia-e" /><span>I am fine with appearing in club photos and videos. <span class=hint>Optional</span></span></label><p class="ferr" id="consentMedia-e" role="alert"></p></div>
+      </div>
     </fieldset>
-    <fieldset><legend>Your links <span class="hint">Optional</span></legend>
-      <div class="field" data-f="discord"><label for="discord">Discord username</label><input id="discord" name="discord" type="text" autocomplete="off" placeholder="username" aria-describedby="discord-e"  /><p class="ferr" id="discord-e" role="alert"></p></div>
-      <div class="field" data-f="linkedin"><label for="linkedin">LinkedIn profile</label><input id="linkedin" name="linkedin" type="text" autocomplete="off" placeholder="https://www.linkedin.com/in/your-name" aria-describedby="linkedin-e" inputmode="url" /><p class="ferr" id="linkedin-e" role="alert"></p></div>
-      <div class="field" data-f="portfolio"><label for="portfolio">Portfolio or GitHub</label><input id="portfolio" name="portfolio" type="text" autocomplete="off" placeholder="https://..." aria-describedby="portfolio-e" inputmode="url" /><p class="ferr" id="portfolio-e" role="alert"></p></div>
-    </fieldset>
+
     <div class="hp" aria-hidden="true"><label>Company<input type="text" name="company" tabindex="-1" autocomplete="off" /></label></div>
     <button class="btn btn--p btn--l" type="submit" id="send"><span class="spin" aria-hidden="true"></span><span id="send-t">Send application</span></button>
     <p class="status" id="status" role="alert"></p>
